@@ -1,0 +1,37 @@
+[
+  {
+    "id": "tshirt-001",
+    "name": "Organic Cotton T-Shirt",
+    "materials": [
+      {
+        "name": "Katoen",
+        "kg": 0.2,
+        "emissionFactor": 2.1
+      },
+      {
+        "name": "Elastaan",
+        "kg": 0.02,
+        "emissionFactor": 4.0
+      }
+    ],
+    "production": {
+      "energyKwh": 4.5,
+      "electricityFactor": 0.35
+    },
+    "transport": [
+      {
+        "distanceKm": 1200,
+        "weightTon": 0.0022,
+        "emissionFactor": 0.015
+      }
+    ],
+    "usePhase": {
+      "co2PerUse": 0.06,
+      "uses": 50
+    },
+    "endOfLife": {
+      "kgWaste": 0.22,
+      "emissionFactor": 0.2
+    }
+  }
+]
