@@ -34,10 +34,10 @@ const calculateFootprint = async (): Promise<void> => {
 };
 
 const calculatePercentage = (value: number): string => {
-  if (!dppStore.carbonFootprint || dppStore.carbonFootprint.totalCo2 === 0) {
+  if (dppStore.carbonFootprint?.totalCo2 === 0) {
     return '0.0';
   }
-  return ((value / dppStore.carbonFootprint.totalCo2) * 100).toFixed(1);
+  return ((value / (dppStore.carbonFootprint?.totalCo2 || 1)) * 100).toFixed(1);
 };
 </script>
 
