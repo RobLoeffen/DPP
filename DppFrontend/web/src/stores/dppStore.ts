@@ -46,7 +46,16 @@ export const useDppStore = defineStore('dpp', {
         curr[1] > max[1] ? curr : max
       );
       
-      return highest[0];
+      // Translate to Dutch
+      const translations: Record<string, string> = {
+        'materials': 'Materialen',
+        'production': 'Productie',
+        'transport': 'Transport',
+        'use': 'Gebruiksfase',
+        'endOfLife': 'Einde Levensduur'
+      };
+      
+      return translations[highest[0]] || highest[0];
     }
   },
 
