@@ -22,7 +22,9 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddSingleton<IDppRepository, JsonDppRepository>();
-builder.Services.AddScoped<ICarbonCalculator, CarbonCalculator>();
+builder.Services.AddScoped<ICarbonCalculator, Iso14067Calculator>();
+builder.Services.AddSingleton<IPefRepository, JsonPefRepository>();
+builder.Services.AddScoped<IPefCalculator, PefCalculator>();
 
 var app = builder.Build();
 
