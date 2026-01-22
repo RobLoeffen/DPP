@@ -32,6 +32,13 @@ const calculateFootprint = async (): Promise<void> => {
   await nextTick();
   resultsRef.value?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 };
+
+const calculatePercentage = (value: number): string => {
+  if (dppStore.carbonFootprint?.totalCo2 === 0) {
+    return '0.0';
+  }
+  return ((value / (dppStore.carbonFootprint?.totalCo2 || 1)) * 100).toFixed(1);
+};
 </script>
 
 <template>
@@ -70,6 +77,7 @@ const calculateFootprint = async (): Promise<void> => {
       <section v-if="currentProduct" class="section" ref="productDetailsRef">
         <h2>Productdetails</h2>
         <table class="details-table">
+          <caption class="sr-only">Productdetails overzicht</caption>
           <tbody>
             <tr>
               <th>Product ID</th>
@@ -88,6 +96,7 @@ const calculateFootprint = async (): Promise<void> => {
 
         <h3>Materialen Overzicht</h3>
         <table class="materials-table">
+          <caption class="sr-only">Materialen en gewichten</caption>
           <thead>
             <tr>
               <th>Materiaal</th>
@@ -125,6 +134,7 @@ const calculateFootprint = async (): Promise<void> => {
 
         <h3>Uitstoot Overzicht</h3>
         <table class="breakdown-table">
+          <caption class="sr-only">CO₂-uitstoot per categorie</caption>
           <thead>
             <tr>
               <th>Categorie</th>
@@ -136,27 +146,27 @@ const calculateFootprint = async (): Promise<void> => {
             <tr>
               <td>Materialen</td>
               <td>{{ dppStore.carbonFootprint.breakdown.materials.toFixed(2) }}</td>
-              <td>{{ ((dppStore.carbonFootprint.breakdown.materials / dppStore.carbonFootprint.totalCo2) * 100).toFixed(1) }}%</td>
+              <td>{{ calculatePercentage(dppStore.carbonFootprint.breakdown.materials) }}%</td>
             </tr>
             <tr>
               <td>Productie</td>
               <td>{{ dppStore.carbonFootprint.breakdown.production.toFixed(2) }}</td>
-              <td>{{ ((dppStore.carbonFootprint.breakdown.production / dppStore.carbonFootprint.totalCo2) * 100).toFixed(1) }}%</td>
+              <td>{{ calculatePercentage(dppStore.carbonFootprint.breakdown.production) }}%</td>
             </tr>
             <tr>
               <td>Transport</td>
               <td>{{ dppStore.carbonFootprint.breakdown.transport.toFixed(2) }}</td>
-              <td>{{ ((dppStore.carbonFootprint.breakdown.transport / dppStore.carbonFootprint.totalCo2) * 100).toFixed(1) }}%</td>
+              <td>{{ calculatePercentage(dppStore.carbonFootprint.breakdown.transport) }}%</td>
             </tr>
             <tr>
               <td>Gebruiksfase</td>
               <td>{{ dppStore.carbonFootprint.breakdown.use.toFixed(2) }}</td>
-              <td>{{ ((dppStore.carbonFootprint.breakdown.use / dppStore.carbonFootprint.totalCo2) * 100).toFixed(1) }}%</td>
+              <td>{{ calculatePercentage(dppStore.carbonFootprint.breakdown.use) }}%</td>
             </tr>
             <tr>
               <td>Einde Levensduur</td>
               <td>{{ dppStore.carbonFootprint.breakdown.endOfLife.toFixed(2) }}</td>
-              <td>{{ ((dppStore.carbonFootprint.breakdown.endOfLife / dppStore.carbonFootprint.totalCo2) * 100).toFixed(1) }}%</td>
+              <td>{{ calculatePercentage(dppStore.carbonFootprint.breakdown.endOfLife) }}%</td>
             </tr>
           </tbody>
         </table>
@@ -366,6 +376,18 @@ const calculateFootprint = async (): Promise<void> => {
   background: #f8d7da;
   border: 1px solid #f5c6cb;
   border-radius: 4px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 @media (max-width: 640px) {
