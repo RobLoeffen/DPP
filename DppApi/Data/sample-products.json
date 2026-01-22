@@ -1,7 +1,7 @@
 [
   {
     "id": "tshirt-001",
-    "name": "Organic Cotton T-Shirt",
+    "name": "Biologisch Katoenen T-Shirt",
     "materials": [
       {
         "name": "Katoen",
@@ -32,6 +32,161 @@
     "endOfLife": {
       "kgWaste": 0.22,
       "emissionFactor": 0.2
+    }
+  },
+  {
+    "id": "jeans-002",
+    "name": "Gerecyclede Denim Jeans",
+    "materials": [
+      {
+        "name": "Gerecycleerd Denim",
+        "kg": 0.65,
+        "emissionFactor": 1.8
+      },
+      {
+        "name": "Polyester",
+        "kg": 0.1,
+        "emissionFactor": 3.2
+      },
+      {
+        "name": "Elastaan",
+        "kg": 0.03,
+        "emissionFactor": 4.0
+      }
+    ],
+    "production": {
+      "energyKwh": 12.0,
+      "electricityFactor": 0.35
+    },
+    "transport": [
+      {
+        "distanceKm": 2500,
+        "weightTon": 0.0078,
+        "emissionFactor": 0.015
+      }
+    ],
+    "usePhase": {
+      "co2PerUse": 0.08,
+      "uses": 100
+    },
+    "endOfLife": {
+      "kgWaste": 0.78,
+      "emissionFactor": 0.15
+    }
+  },
+  {
+    "id": "sneaker-003",
+    "name": "Duurzame Hardloopschoenen",
+    "materials": [
+      {
+        "name": "Gerecycleerd Rubber",
+        "kg": 0.3,
+        "emissionFactor": 2.5
+      },
+      {
+        "name": "Organisch Katoen",
+        "kg": 0.15,
+        "emissionFactor": 2.1
+      },
+      {
+        "name": "EVA Foam",
+        "kg": 0.2,
+        "emissionFactor": 3.8
+      }
+    ],
+    "production": {
+      "energyKwh": 8.5,
+      "electricityFactor": 0.35
+    },
+    "transport": [
+      {
+        "distanceKm": 8000,
+        "weightTon": 0.0065,
+        "emissionFactor": 0.015
+      }
+    ],
+    "usePhase": {
+      "co2PerUse": 0.05,
+      "uses": 300
+    },
+    "endOfLife": {
+      "kgWaste": 0.65,
+      "emissionFactor": 0.25
+    }
+  },
+  {
+    "id": "jacket-004",
+    "name": "Gerecyclede Polyester Jas",
+    "materials": [
+      {
+        "name": "Gerecycleerd Polyester",
+        "kg": 0.45,
+        "emissionFactor": 2.2
+      },
+      {
+        "name": "Nylon",
+        "kg": 0.08,
+        "emissionFactor": 3.5
+      }
+    ],
+    "production": {
+      "energyKwh": 10.0,
+      "electricityFactor": 0.35
+    },
+    "transport": [
+      {
+        "distanceKm": 3200,
+        "weightTon": 0.0053,
+        "emissionFactor": 0.015
+      }
+    ],
+    "usePhase": {
+      "co2PerUse": 0.07,
+      "uses": 150
+    },
+    "endOfLife": {
+      "kgWaste": 0.53,
+      "emissionFactor": 0.18
+    }
+  },
+  {
+    "id": "backpack-005",
+    "name": "Hennep Canvas Rugzak",
+    "materials": [
+      {
+        "name": "Hennep Canvas",
+        "kg": 0.4,
+        "emissionFactor": 1.5
+      },
+      {
+        "name": "Gerecycleerd Plastic",
+        "kg": 0.12,
+        "emissionFactor": 2.8
+      },
+      {
+        "name": "Metalen Ritsen",
+        "kg": 0.05,
+        "emissionFactor": 6.0
+      }
+    ],
+    "production": {
+      "energyKwh": 6.5,
+      "electricityFactor": 0.35
+    },
+    "transport": [
+      {
+        "distanceKm": 1800,
+        "weightTon": 0.0057,
+        "emissionFactor": 0.015
+      }
+    ],
+    "usePhase": {
+      "co2PerUse": 0.04,
+      "uses": 500
+    },
+    "endOfLife": {
+      "kgWaste": 0.57,
+      "emissionFactor": 0.22
     }
   }
 ]
