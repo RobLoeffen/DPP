@@ -1,0 +1,136 @@
+{
+  "method": "PEF",
+  "impactCategory": "Klimaatverandering",
+  "functionalUnit": {
+    "id": "tshirt-001",
+    "product": "Organisch katoenen T-Shirt",
+    "quantity": 1,
+    "unit": "kledingstuk",
+    "mass": {
+      "value": 0.2,
+      "unit": "kg"
+    }
+  },
+  "lifeCycleStages": [
+    {
+      "name": "Katoenteelt",
+      "emissions": [
+        {
+          "substance": "CO2_fossielen",
+          "value": 0.35,
+          "unit": "kg"
+        },
+        {
+          "substance": "CH4",
+          "value": 0.002,
+          "unit": "kg"
+        },
+        {
+          "substance": "N2O",
+          "value": 0.0006,
+          "unit": "kg"
+        }
+      ]
+    },
+    {
+      "name": "Garen spinnen",
+      "emissions": [
+        {
+          "substance": "CO2_fossielen",
+          "value": 0.18,
+          "unit": "kg"
+        },
+        {
+          "substance": "CH4",
+          "value": 0.0002,
+          "unit": "kg"
+        }
+      ]
+    },
+    {
+      "name": "Stof breien",
+      "emissions": [
+        {
+          "substance": "CO2_fossielen",
+          "value": 0.12,
+          "unit": "kg"
+        },
+        {
+          "substance": "CH4",
+          "value": 0.0001,
+          "unit": "kg"
+        }
+      ]
+    },
+    {
+      "name": "Verven en afronden",
+      "emissions": [
+        {
+          "substance": "CO2_fossielen",
+          "value": 0.30,
+          "unit": "kg"
+        },
+        {
+          "substance": "CH4",
+          "value": 0.0003,
+          "unit": "kg"
+        },
+        {
+          "substance": "N2O",
+          "value": 0.00005,
+          "unit": "kg"
+        }
+      ]
+    },
+    {
+      "name": "Fabricering",
+      "emissions": [
+        {
+          "substance": "CO2_fossielen",
+          "value": 0.10,
+          "unit": "kg"
+        }
+      ]
+    },
+    {
+      "name": "Transportatie",
+      "emissions": [
+        {
+          "substance": "CO2_fossielen",
+          "value": 0.15,
+          "unit": "kg"
+        }
+      ]
+    },
+    {
+      "name": "Gebruik fase",
+      "emissions": [
+        {
+          "substance": "CO2_fossielen",
+          "value": 0.60,
+          "unit": "kg"
+        },
+        {
+          "substance": "CH4",
+          "value": 0.0005,
+          "unit": "kg"
+        }
+      ]
+    },
+    {
+      "name": "Afvalverwerking",
+      "emissions": [
+        {
+          "substance": "CO2_fossielen",
+          "value": 0.05,
+          "unit": "kg"
+        },
+        {
+          "substance": "CH4",
+          "value": 0.0004,
+          "unit": "kg"
+        }
+      ]
+    }
+  ]
+}

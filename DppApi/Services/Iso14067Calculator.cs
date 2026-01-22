@@ -3,7 +3,7 @@ using DppApi.Domain.Interfaces;
 
 namespace DppApi.Services;
 
-public class CarbonCalculator : ICarbonCalculator
+public class Iso14067Calculator : ICarbonCalculator
 {
     public DppResult Calculate(DppProduct product)
     {
