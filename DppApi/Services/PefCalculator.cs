@@ -5,14 +5,13 @@ namespace DppApi.Services;
 
 public class PefCalculator : IPefCalculator
 {
-    // IPCC AR5 GWP100 factors (100-year time horizon)
     private static readonly Dictionary<string, double> GwpFactors = new()
     {
         ["CO2"] = 1.0,
         ["CO2_fossielen"] = 1.0,
         ["CO2_biogeen"] = 1.0,
-        ["CH4"] = 28.0,      // Methane
-        ["N2O"] = 265.0      // Nitrous oxide
+        ["CH4"] = 28.0,      // Methaan
+        ["N2O"] = 265.0      // Stikstofmonoxide 
     };
 
     public PefResult Calculate(PefProduct product)
